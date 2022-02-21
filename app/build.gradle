@@ -31,16 +31,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         compose true
         viewBinding true
     }
+
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
     }
+
     packagingOptions {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
@@ -54,23 +58,23 @@ dependencies {
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.3.1'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$navigation_version"
+    implementation 'androidx.activity:activity-compose:1.4.0'
 
-    implementation 'androidx.navigation:navigation-compose:2.5.0-alpha01'
-    implementation "androidx.compose.runtime:runtime:${compose_version}"
-    implementation "androidx.compose.runtime:runtime-rxjava3:${compose_version}"
-    implementation 'androidx.navigation:navigation-runtime-ktx:2.3.5'
-    implementation "androidx.compose.foundation:foundation:${compose_version}"
-    implementation "androidx.compose.foundation:foundation-layout:${compose_version}"
-    implementation "androidx.compose.ui:ui-util:${compose_version}"
-    implementation "com.google.accompanist:accompanist-insets:${accompanist_version}"
+    implementation "androidx.navigation:navigation-compose:$navigation_version"
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation_version"
+    implementation "androidx.compose.runtime:runtime:$compose_version"
+    implementation "androidx.compose.runtime:runtime-rxjava3:$compose_version"
+    implementation "androidx.compose.foundation:foundation:$compose_version"
+    implementation "androidx.compose.foundation:foundation-layout:$compose_version"
+    implementation "androidx.compose.ui:ui-util:$compose_version"
+    implementation "com.google.accompanist:accompanist-insets:$accompanist_version"
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
-    implementation "androidx.compose.ui:ui-viewbinding:${compose_version}"
-    implementation "androidx.compose.runtime:runtime-livedata:${compose_version}"
+    implementation "androidx.compose.ui:ui-viewbinding:$compose_version"
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
     implementation 'androidx.paging:paging-compose:1.0.0-alpha14'
-    implementation "com.google.accompanist:accompanist-pager:${accompanist_version}"
-    implementation "com.google.accompanist:accompanist-pager-indicators:${accompanist_version}"
+    implementation "com.google.accompanist:accompanist-pager:$accompanist_version"
+    implementation "com.google.accompanist:accompanist-pager-indicators:$accompanist_version"
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
     implementation 'com.google.code.gson:gson:2.8.9'
@@ -78,8 +82,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.2'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
-    implementation "androidx.paging:paging-runtime-ktx:${paging_version}"
-    implementation "androidx.paging:paging-rxjava3:${paging_version}"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation "androidx.paging:paging-rxjava3:$paging_version"
     implementation "io.coil-kt:coil-compose:1.3.2"
 
     testImplementation 'junit:junit:4.13.2'
